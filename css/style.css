@@ -545,8 +545,8 @@ template {
      }
     /*Welcome*/
     .welcome-content {
-        padding-top: 160px;
-        padding-bottom: 80px;
+        padding-top: 20px;
+        padding-bottom: -20px;
         display: block;
         text-align: center;
     }
@@ -567,7 +567,7 @@ template {
         margin: auto;
     }
     .welcome-colum {
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     .welcome-colum h3 {
         font-family: Dosis-bold;
@@ -644,7 +644,7 @@ template {
   		width: 93%;
   	}
   	.phone-col {
-  		margin-top: 90px;
+  		margin-top: 20px;
   		margin-bottom:-3px;
   		text-align: center;
   	}
