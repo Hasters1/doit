@@ -546,7 +546,6 @@ template {
     /*Welcome*/
     .welcome-content {
         padding-top: 20px;
-        padding-bottom: -20px;
         display: block;
         text-align: center;
     }
