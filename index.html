@@ -25,7 +25,61 @@
     <title>Fitness Nutrition 2nd Edition - Now Available!</title>
   </head>
   <body>           
-	    <div class="main-container ">
+	    <div class="main-container">
+
+			<style>
+				.overlay {
+				  position: fixed;
+				  bottom: 0px;
+				  left: 0px;
+				  right: 0px;
+				  top: 0px;
+				  width: 100%;
+				  height: 100%;
+				  background-color: rgba(43,37,35,.86);
+				  z-index: 50;
+				}
+
+				.modalContainer {
+					margin-top: 12%;
+				}
+				.formBody {
+					color: black;
+					width: 45%;
+					height: 40%;
+					margin: auto;
+					background-color: white;
+				}
+			
+				@media screen and (max-width: 670px) {
+				.show{
+				display:none !important;
+				}
+			}
+			</style>
+
+
+			<div class="overlay modalBlock" onclick="hide()" style="display: none;">
+				<div class="modalContainer" onclick="hide()" style="display: none;">
+						<div class="formBody text-center" style="padding: 15px; font-style: normal;">
+							<h2 id="formTitle">Please enter your information to proceed with the purchase</h2>
+
+
+							<div class="form-box">
+								<label value="Name" style="font-size: 20px;">First Name:</label><br>
+									<input type="text" name="name" id="formFname" onchange="valid()" required>
+									<p></p><label value="lname" style="font-size: 20px;">Last Name:</label><br>
+									<input type="text" name="lname" id="formLname" onchange="valid()" required></p>
+									<p></p><label value="email" style="font-size: 20px;">Email:</label><br>
+									<input type="text" name="email" id="formEmail" onchange="valid()" required></p>  
+							</div>
+
+							<button onclick="submit()" id="continueButton" class="btn btn-success btn-lg" style="background-color:#53c5d5; border-color:#53c5d5" disabled>BUY NOW!</button>
+					 </div>
+				 </div>
+			   </div>
+
+
 	      <div class="banner">
 	          <div class="row">
 	            <div class="col-12 logo">
@@ -43,7 +97,8 @@
 Everyone knows how important it is to maintain a healthy physique. Often, achieving the ideal body requires you to lose weight and build lean muscle. But how do you do that? To become physically fit, you need to have the knowledge necessary to get you on your way and the motivation required to keep you going.</p>
 <h2>9.99 $!</h2>
 	                <div class="butns">
-	                  <button class="get-btn">BUY NOW</button>  
+	                	
+	                  <button class="get-btn" onclick="pop()">BUY NOW</button>  
 	                </div>
 	              </div>    
 	          </div>     
@@ -118,14 +173,48 @@ Everyone knows how important it is to maintain a healthy physique. Often, achiev
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <script src="js/owl.js"></script>
     <script src="js/fixed-header.js"></script>
     <script src="plugin/background-video/jquery.background-video.js"></script>
-    <script src="js/bkg-video-hide.js"></script>     
+	<script src="js/bkg-video-hide.js"></script>  
+	
+	
+	<script>
+		function valid() {
+			let fname = $('#formFname').val();
+			let lname = $('#formLname').val();
+			let email = $('#formEmail').val();
+
+			if (fname && lname && email) {
+				$('#continueButton').removeAttr('disabled');
+			} else {
+				$("#continueButton").prop("disabled", true);
+			}
+		}
+
+		function pop(){
+			$('.modalBlock').fadeIn();
+			$('.modalContainer').fadeIn();
+		}
+
+		function submit() {
+			$('.get-btn').prop('disabled', true);
+			$('.modalBlock').fadeOut();
+			$('.modalContainer').fadeOut();
+		}
+
+		function hide() { 
+			$('.modalBlock').fadeOut();
+			$('.modalContainer').fadeOut();
+		} 
+
+		$(".formBody").click(function (event) { 
+			event.stopPropagation(); 
+		}); 
+	</script>
   </body>
 </html>
