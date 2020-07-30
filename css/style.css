@@ -545,7 +545,8 @@ template {
      }
     /*Welcome*/
     .welcome-content {
-        padding-top: 20px;
+        padding-top: 160px;
+        /* padding-bottom: 80px; */
         display: block;
         text-align: center;
     }
@@ -566,7 +567,7 @@ template {
         margin: auto;
     }
     .welcome-colum {
-        padding-bottom: 50px;
+        padding-bottom: 150px;
     }
     .welcome-colum h3 {
         font-family: Dosis-bold;
@@ -643,7 +644,7 @@ template {
   		width: 93%;
   	}
   	.phone-col {
-  		margin-top: 20px;
+  		margin-top: 90px;
   		margin-bottom:-3px;
   		text-align: center;
   	}
@@ -752,10 +753,10 @@ template {
     }
   	/*Why us*/
   	.chose {
-  		padding-top: 100px;
+  		/* padding-top: 100px; */
   	}
   	.chose .iphones-5s {
-  		margin-top: 150px;
+  		margin-top: 100px;
   	}
   	.chose-detail {
   		margin-top: 60px;

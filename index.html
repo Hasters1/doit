@@ -53,7 +53,17 @@
 			
 				@media screen and (max-width: 670px) {
 				.show{
-				display:none !important;
+					display:none !important;
+				}
+				.modalContainer {
+					margin-top: 12%;
+				}
+				.formBody {
+					color: black;
+					width: 100%;
+					height: 40%;
+					margin: auto;
+					background-color: white;
 				}
 			}
 			</style>
@@ -67,11 +77,11 @@
 
 							<div class="form-box">
 								<label value="Name" style="font-size: 20px;">First Name:</label><br>
-									<input type="text" name="name" id="formFname" onchange="valid()" required>
+									<input type="text" name="name" id="formFname" onkeyup="valid()" required>
 									<p></p><label value="lname" style="font-size: 20px;">Last Name:</label><br>
-									<input type="text" name="lname" id="formLname" onchange="valid()" required></p>
+									<input type="text" name="lname" id="formLname" onkeyup="valid()" required></p>
 									<p></p><label value="email" style="font-size: 20px;">Email:</label><br>
-									<input type="text" name="email" id="formEmail" onchange="valid()" required></p>  
+									<input type="text" name="email" id="formEmail" onkeyup="valid()" required></p>  
 							</div>
 
 							<button onclick="submit()" id="continueButton" class="btn btn-success btn-lg" style="background-color:#53c5d5; border-color:#53c5d5" disabled>BUY NOW!</button>
@@ -90,7 +100,7 @@
 	                  <img src="image/iphone-slider-1.png" class="img-fluid" alt="">
 	              </div> 
 	              <div class="col-lg-6 content">
-	                <h2>Fitness Nutrition </h2>  
+	                <h1>Fitness Nutrition </h1>  
 	                <h2>The Ultimate Fitness Guide: Health, Fitness, Nutrition and Muscle Building - Lose Weight and Build Lean Muscle </h2>  
 	                <p>DO YOU WANT TO KNOW HOW YOU CAN LOSE WEIGHT AND BUILD MUSCLE FAST, STARTING RIGHT NOW? THIS BOOK WILL LET YOU IN ON THE SECRET!
 
@@ -105,6 +115,8 @@ Everyone knows how important it is to maintain a healthy physique. Often, achiev
 	      </div>  
 	    </div> 
 	        </nav>
+	      </div>
+	    </div> 
 	    <!--Welcome-->  
 	    <div class="main-container"> 
 	        <div class="inside-container">
@@ -117,6 +129,7 @@ Everyone knows how important it is to maintain a healthy physique. Often, achiev
 </p>3.Determine what your meal frequency and caloric intake should be</p>
 </p>4.Know which exercises you should do to get that toned and sculpted look .</p>
 	            </div>
+	          </div>
 	    </div>
 	    <div class="inside-container"><!--Why us-->
 	    	<div class="row chose">
@@ -149,7 +162,7 @@ Everyone knows how important it is to maintain a healthy physique. Often, achiev
 	    				<div class="input-group mb-3 input-mobile">
 							<input type="text" class="form-control news-form" placeholder="Enter Your Email Address Here.." aria-label="Email" >
 							<div class="input-group-append">
-							   	<button class="news-btn" type="button">SUBSCRIBE</button>
+							   	<button class="news-btn" type="button">BUY NOW</button>
 							</div>
 						</div>
 	    			</div>
